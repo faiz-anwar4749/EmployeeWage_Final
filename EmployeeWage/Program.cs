@@ -6,8 +6,20 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Program");
-            Console.ReadKey();
+            int FULL_TIME = 2;
+            Random random = new Random();
+
+
+            int EmployeeCheck = random.Next(1, 3);
+            if (EmployeeCheck == FULL_TIME)
+            {
+                Console.WriteLine("Employee is Present");
+            }
+            else
+            {
+                Console.WriteLine("Employee is Absent");
+            }
+
         }
     }
 }
