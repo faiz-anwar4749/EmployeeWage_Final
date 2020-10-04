@@ -9,7 +9,7 @@ namespace EmployeeWage
         public const int EMP_WAGE_PER_HOUR = 20;
         public const int MaxWorkingHours = 100;
         public const int MaxWorkingDays = 20;
-        public static int computeEmpWage()
+        public static int ComputeEmpWage()
         {
             int empHours, empWage = 0;
             int workingDays = 0;
@@ -39,7 +39,7 @@ namespace EmployeeWage
         }
         static void Main(string[] args)
         {
-            computeEmpWage();
+            ComputeEmpWage();
         }
     }
 }
