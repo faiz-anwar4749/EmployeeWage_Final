@@ -4,15 +4,15 @@ namespace EmployeeWage
 {
     class Program
     {
-        static void Main(string[] args)
+        public const int IS_FULL_TIME = 2;
+        public const int IS_PART_TIME = 1;
+        public const int EMP_WAGE_PER_HOUR = 20;
+        public const int MaxWorkingHours = 100;
+        public const int MaxWorkingDays = 20;
+        public static int computeEmpWage()
         {
-            int IS_FULL_TIME = 2;
-            int IS_PART_TIME = 1;
-            int EMP_WAGE_PER_HOUR = 20;
+            int empHours, empWage = 0;
             int workingDays = 0;
-            int MaxWorkingHours = 100;
-            int MaxWorkingDays = 20;
-            int empHours = 0, empWage = 0;
             int workingHours = 0;
             Random random = new Random();
             while (workingDays < MaxWorkingDays && workingHours < MaxWorkingHours)
@@ -35,6 +35,11 @@ namespace EmployeeWage
                 empWage += empHours * EMP_WAGE_PER_HOUR;
             }
             Console.WriteLine("Employee Wage: " + empWage);
+            return empWage;
+        }
+        static void Main(string[] args)
+        {
+            computeEmpWage();
         }
     }
 }
